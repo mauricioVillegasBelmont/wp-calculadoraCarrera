@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteRule !(^dist|^public) plugin.php
+RewriteRule \.(git|svn)(/.*)?$ - [F,NC]
