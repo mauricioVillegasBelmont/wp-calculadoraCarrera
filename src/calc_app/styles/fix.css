@@ -1,0 +1,68 @@
+#calculadoraApp a:where(:not(.wp-element-button)) {
+  text-decoration: inherit;
+}
+:root {
+  --text-base: 20px;
+}
+#calculadoraApp{
+  max-width: 100%;
+}
+#calculadoraApp h2{
+  font-weight: 500;
+}
+#calculadoraApp .btn,
+#calculadoraApp button{
+  font-size: 18px;
+  cursor: pointer;
+  letter-spacing:5px;
+  transform-origin: center;
+  will-change: transform;
+  transition: transform .3s ease;
+}
+#calculadoraApp .btn:hover,
+#calculadoraApp button:hover{
+  transform: scale(1.1);
+  background-color: var(--color-emerald-800) !important;
+}
+
+.apexcharts-toolbar {
+  display: none !important;
+}
+
+.text-head1 {
+  font-size: 40px !important;
+}
+.text-head2 {
+  font-size: 24px !important;
+}
+.text-head3 {
+  font-size: 22px !important;
+}
+.text-med {
+  font-size: 16px !important;
+}
+.text-sushi-500 {
+  color: #77b944;
+}
+.text-emerald-950 {
+  color: #004438;
+}
+.font-sarabun{
+  font-family: "Sarabun", sans-serif;
+}
+.font-bold{
+  font-weight: 700;
+}
+.bg-picture{
+  background-image: url(../assets/img/fondo-verde-textura-2.webp);
+  background: #77B944;
+}
+@media print {
+  .component,
+  .component *{
+    break-inside: avoid;
+  }
+  .chart-container {
+    width: 900px;
+  }
+}

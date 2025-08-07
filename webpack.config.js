@@ -2,10 +2,16 @@ const path = require('path')
 const { defineReactCompilerLoaderOption, reactCompilerLoader } = require('react-compiler-webpack')
 
 module.exports = {
-  entry: './src/index.tsx',
+  entry: {
+    bundle: './src/index.tsx',
+    // panel_options: './src/panel_options.js',
+    // otros puntos de entrada si los tienes
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: '[name].js',
+    chunkFilename: '[contenthash].chunk.js',
+    clean: true,
   },
   devServer: {
     static: {
@@ -27,6 +33,10 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.svg$/,
+        type: 'asset/resource',
+      },
       {
         test: /\.[mc]?[jt]sx?$/i,
         exclude: /node_modules/,

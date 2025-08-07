@@ -1,8 +1,0 @@
-@import "tailwindcss";
-#calculadoraApp a:where(:not(.wp-element-button)){
-  color: var(--color-emerald-800) !important;
-  text-decoration: inherit;
-}
-.apexcharts-toolbar{
-  display: none !important;
-}
